@@ -18,5 +18,9 @@
   },
   "optionalDependencies": {
     "lightningcss": "^1.32.0"
+  },
+  "devDependencies": {
+    "lightningcss": "^1.32.0",
+    "wrangler": "^4.83.0"
   }
 }
