@@ -1,0 +1,42 @@
+---
+const path = Astro.url.pathname;
+const isActive = (href: string) => path === href || (href !== '/' && path.startsWith(href));
+
+const links = [
+  { href: '/work', label: 'work' },
+  { href: '/lab', label: 'lab' },
+  { href: '/notebook', label: 'notebook' },
+  { href: '/about', label: 'about' },
+];
+---
+
+<header class="border-b border-ink/10 sticky top-0 z-50 bg-paper/85 backdrop-blur">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between font-mono text-sm">
+    <a href="/" class="text-ink font-bold tracking-tight hover:text-electric transition-colors">
+      <span class="text-electric">$</span> bbd.sh
+    </a>
+    <ul class="hidden md:flex items-center gap-6">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class={`hover:text-electric transition-colors ${
+              isActive(link.href) ? 'text-electric' : 'text-ink/70'
+            }`}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+          href="/contact"
+          class="px-4 py-2 bg-ink text-paper hover:bg-electric hover:text-ink transition-colors rounded"
+        >
+          start a project →
+        </a>
+      </li>
+    </ul>
+    <button class="md:hidden text-ink" aria-label="Menu">☰</button>
+  </nav>
+</header>

@@ -1,0 +1,169 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base
+  title="How We Work — bbd.sh"
+  description="bbd.sh's approach: validate the business, then ship the product. A 4-step delivery process, modern AI tooling, and flexible terms that suit founders, operators, and VCs."
+>
+  <section class="border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-6 py-20">
+      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-2">## workflow.md</p>
+      <h1 class="font-display text-5xl md:text-6xl font-bold leading-tight mb-8">
+        How we work
+      </h1>
+      <p class="text-xl text-ink/75 leading-relaxed mb-12">
+        We work with founders, operators, and VCs across the full lifecycle —
+        from validating the business model, through brand and product, to launch and growth.
+        Any digital product with a real business behind it.
+      </p>
+    </div>
+  </section>
+
+  <section class="border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-6 py-20 prose prose-lg">
+      <h2 class="font-display text-3xl font-bold mb-6">What we offer</h2>
+      <p class="text-ink/75 mb-8">
+        End-to-end incubation. Pick the slice you need, or all of it:
+      </p>
+      <div class="grid md:grid-cols-2 gap-6 not-prose font-mono text-sm mb-12">
+        {[
+          ['Validate the model', 'pressure-test the idea, ICP, pricing, GTM before code is written'],
+          ['Brand & strategy', 'name, positioning, identity, narrative, launch plan'],
+          ['Build & ship', 'full-stack engineering + AI integration end-to-end'],
+          ['Growth & ops', 'SEO, analytics, lifecycle, hand-off when ready · AEO via citebeam.bbd.sh'],
+        ].map(([cat, desc]) => (
+          <div class="border border-electric/40 bg-electric/5 p-4">
+            <p class="text-ink font-bold mb-1">{cat}</p>
+            <p class="text-muted text-xs leading-relaxed">{desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <h3 class="font-display text-2xl font-bold mb-4">Product shapes we build</h3>
+      <p class="text-ink/75 mb-8">
+        Strong full-stack engineering plus AI tooling — covers most digital product types:
+      </p>
+      <div class="grid md:grid-cols-2 gap-6 not-prose font-mono text-sm">
+        {[
+          ['SaaS / tools', 'B2B, B2C, vertical'],
+          ['AI agents / copilots', 'support, sales, research, writing — any vertical'],
+          ['Browser & desktop apps', 'Chrome / Edge / Electron / Tauri'],
+          ['Mobile', 'React Native / Flutter / native'],
+          ['Content & media', 'blogs, newsletters, small communities'],
+          ['Ecommerce / standalone storefronts', 'Shopify / custom / cross-border'],
+          ['Dev tools / API services', 'CLIs, SDKs, API-as-a-service'],
+          ['Web3 / crypto', 'dApp frontends, contract integration (on request)'],
+        ].map(([cat, desc]) => (
+          <div class="border-l-2 border-electric pl-4">
+            <p class="text-ink font-bold mb-1">{cat}</p>
+            <p class="text-muted text-xs">{desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-ink/10 bg-graphite text-paper">
+    <div class="max-w-4xl mx-auto px-6 py-20">
+      <h2 class="font-display text-3xl font-bold mb-12">Stack &amp; tools</h2>
+      <p class="text-paper/70 mb-12 leading-relaxed">
+        We're not religious about the stack — but we lean on "less is more."
+        We pick what fits each project. These are our defaults:
+      </p>
+
+      <div class="space-y-8 font-mono text-sm">
+        <div>
+          <h3 class="text-electric mb-3">## frontend</h3>
+          <p class="text-paper/80 leading-relaxed">
+            Astro (content) · Next.js (product) · SvelteKit (prototypes) · Tailwind · shadcn/ui · v0 / Cursor for speed
+          </p>
+        </div>
+        <div>
+          <h3 class="text-electric mb-3">## backend</h3>
+          <p class="text-paper/80 leading-relaxed">
+            FastAPI / Hono / Bun · PostgreSQL + pgvector · Redis · Drizzle ORM · Cloudflare Workers / Edge functions
+          </p>
+        </div>
+        <div>
+          <h3 class="text-electric mb-3">## ai stack</h3>
+          <p class="text-paper/80 leading-relaxed">
+            OpenAI GPT-5 · Anthropic Claude 4.7 · DeepSeek V4 · LangGraph · MCP · custom RAG · LoRA fine-tuning · multi-model routing
+          </p>
+        </div>
+        <div>
+          <h3 class="text-electric mb-3">## devops</h3>
+          <p class="text-paper/80 leading-relaxed">
+            Cloudflare Pages · Vercel · Fly.io · Docker · GitHub Actions · Sentry · PostHog
+          </p>
+        </div>
+        <div>
+          <h3 class="text-electric mb-3">## design</h3>
+          <p class="text-paper/80 leading-relaxed">
+            Figma · Midjourney + Flux · in-house brand kit
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-b border-ink/10">
+    <div class="max-w-4xl mx-auto px-6 py-20">
+      <h2 class="font-display text-3xl font-bold mb-4">Engagement (open)</h2>
+      <p class="text-ink/70 mb-12 max-w-2xl leading-relaxed">
+        We don't have a fixed deal template. Each engagement is structured around the situation —
+        founders, operators, and VCs all welcome.
+      </p>
+
+      <div class="space-y-6 font-mono text-sm">
+        <div class="border border-ink/10 p-6">
+          <p class="text-electric mb-2">option A · build cost</p>
+          <p class="text-ink/80 leading-relaxed">
+            One-time fee scoped to the project. After delivery the product is yours, we step out.
+            <span class="text-muted">// for founders or VCs with capital who want full control</span>
+          </p>
+        </div>
+        <div class="border border-ink/10 p-6">
+          <p class="text-electric mb-2">option B · build cost + revenue share</p>
+          <p class="text-ink/80 leading-relaxed">
+            Lower upfront cost in exchange for a revenue split after launch.
+            <span class="text-muted">// for tight cash + high conviction on both sides</span>
+          </p>
+        </div>
+        <div class="border border-ink/10 p-6">
+          <p class="text-electric mb-2">option C · equity / co-build</p>
+          <p class="text-ink/80 leading-relaxed">
+            We take meaningful equity and build alongside you as a founding team.
+            <span class="text-muted">// for high-conviction situations where we'd back the idea ourselves</span>
+          </p>
+        </div>
+        <div class="border border-ink/10 p-6">
+          <p class="text-electric mb-2">option D · ongoing partnership</p>
+          <p class="text-ink/80 leading-relaxed">
+            Long-term build &amp; growth. Milestone- or earn-out-based, structure flexible.
+            <span class="text-muted">// for products that need continued iteration, or VC portcos needing an embedded build team</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-12 font-display text-2xl italic text-ink/70 max-w-2xl">
+        "Best fit: founders or partners with capital and conviction.
+        But the deal shape follows the situation, not the other way around."
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-4xl mx-auto px-6 py-24 text-center">
+      <h2 class="font-display text-4xl md:text-5xl font-bold mb-8">
+        Ready to talk about your idea?
+      </h2>
+      <a
+        href="/contact"
+        class="inline-block px-8 py-4 bg-electric text-ink hover:bg-paper transition-colors rounded font-mono font-bold"
+      >
+        $ ./let-us-talk →
+      </a>
+    </div>
+  </section>
+</Base>

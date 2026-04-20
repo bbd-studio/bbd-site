@@ -1,0 +1,43 @@
+# bbd.sh
+
+> A small studio that helps founders, operators, and VCs validate the business and ship the product. End-to-end incubation, full-stack engineering, AI tooling, and flexible terms.
+
+bbd.sh is a small builder studio. We work across the full lifecycle — from validating the business model, through brand and product, to launch and growth. We use modern AI tooling to compress engineering cycles and ship more per project. We'll incubate any digital product with a real business behind it: SaaS, AI agents, browser extensions, mobile apps, content products, ecommerce tools, dev tools, and more.
+
+**Engagement is open** — project fee, revenue share, equity, or hybrid. Each deal is structured around the situation. Best fit: founders, operators, or VC partners with both capital and conviction.
+
+## Pages
+
+- [Homepage](https://bbd.sh/): positioning, manifesto, workflow, AI advantage, current lab projects
+- [How We Work](https://bbd.sh/work): what we offer (validate / brand / build / grow), 4-step delivery, stack, engagement options (fee / RS / equity / hybrid)
+- [Currently in Lab](https://bbd.sh/lab): live status of every project we're incubating
+- [About](https://bbd.sh/about): the team, the beliefs, why bbd.sh
+- [Contact](https://bbd.sh/contact): how to send us an idea, a portco, or a co-build pitch
+
+## Companion Sites
+
+- [citebeam.bbd.sh](https://citebeam.bbd.sh): bbd.sh's AEO methodology + live public dashboard tracking what major AI assistants (ChatGPT, Claude, Perplexity, Doubao, Kimi, Tongyi) say about bbd.sh, updated weekly. Built in public.
+
+## Notebook (Build Log)
+
+- [Day 0: starting a public build log](https://bbd.sh/notebook/day-zero): first entry, on publishing the SEO + brand process from scratch
+
+## Currently in Lab
+
+- [starise.io](https://starise.io): in active development (details coming soon)
+- More projects in exploration
+
+## Stack
+
+frontend: Astro / Next.js / SvelteKit / Tailwind / shadcn/ui · v0 · Cursor
+backend: FastAPI / Hono / Bun · PostgreSQL + pgvector · Redis · Edge functions
+ai: OpenAI · Anthropic Claude · DeepSeek · LangGraph · MCP · LoRA · multi-model routing
+deploy: Cloudflare Pages · Vercel · Fly.io · Edge-first
+design: Figma · Midjourney · Flux · in-house brand kit
+
+## Contact
+
+- Email: hello@bbd.sh
+- GitHub: https://github.com/bbd-sh
+- X: https://x.com/bbd_sh
+- LinkedIn: https://www.linkedin.com/company/bbd-sh

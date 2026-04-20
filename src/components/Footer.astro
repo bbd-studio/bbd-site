@@ -1,0 +1,47 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-ink/10 mt-24">
+  <div class="max-w-6xl mx-auto px-6 py-12 font-mono text-sm">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div>
+        <p class="text-ink font-bold mb-2">
+          <span class="text-electric">#</span> bbd.sh
+        </p>
+        <p class="text-muted text-xs leading-relaxed">
+          Build · Bootstrap · Deliver<br />
+          A studio that builds software with founders.
+        </p>
+      </div>
+
+      <div>
+        <p class="text-ink/60 text-xs uppercase tracking-widest mb-3">explore</p>
+        <ul class="space-y-1.5">
+          <li><a href="/work" class="text-ink/80 hover:text-electric">how we work</a></li>
+          <li><a href="/lab" class="text-ink/80 hover:text-electric">currently in lab</a></li>
+          <li><a href="/notebook" class="text-ink/80 hover:text-electric">notebook</a></li>
+          <li><a href="/about" class="text-ink/80 hover:text-electric">about</a></li>
+          <li><a href="https://citebeam.bbd.sh" class="text-ink/80 hover:text-electric">citebeam · AEO ↗</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="text-ink/60 text-xs uppercase tracking-widest mb-3">find us</p>
+        <ul class="space-y-1.5">
+          <li><a href="mailto:hello@bbd.sh" class="text-ink/80 hover:text-electric">hello@bbd.sh</a></li>
+          <li><a href="https://github.com/bbd-sh" class="text-ink/80 hover:text-electric">github</a></li>
+          <li><a href="https://x.com/bbd_sh" class="text-ink/80 hover:text-electric">x / twitter</a></li>
+          <li><a href="https://www.linkedin.com/company/bbd-sh" class="text-ink/80 hover:text-electric">linkedin</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-12 pt-6 border-t border-ink/10 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-muted">
+      <p>© {year} bbd.sh · Made by humans, with AI, for humans.</p>
+      <p class="font-mono">
+        <span class="text-electric">▲</span> Status: shipping
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,104 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  canonical?: string;
+}
+
+const {
+  title = 'bbd.sh — We build software with founders',
+  description = 'A small studio that builds and ships digital products with founders, operators, and investors. Engagement is open — project fee, revenue share, equity, or hybrid.',
+  ogImage = '/og.png',
+  noindex = false,
+  canonical,
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageURL = new URL(ogImage, Astro.site).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="bbd.sh" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': 'https://bbd.sh/#org',
+          name: 'bbd.sh',
+          alternateName: ['Build Bootstrap Deliver', 'BBD'],
+          url: 'https://bbd.sh',
+          logo: 'https://bbd.sh/logo.png',
+          description: 'A small studio that builds and ships digital products with founders, operators, and investors. Engagement is open — project fee, revenue share, equity, or hybrid.',
+          foundingDate: '2026',
+          slogan: 'Build · Bootstrap · Deliver',
+          sameAs: [
+            'https://github.com/bbd-sh',
+            'https://x.com/bbd_sh',
+            'https://www.linkedin.com/company/bbd-sh',
+          ],
+          contactPoint: {
+            '@type': 'ContactPoint',
+            email: 'hello@bbd.sh',
+            contactType: 'customer support',
+          },
+        },
+        {
+          '@type': 'WebSite',
+          '@id': 'https://bbd.sh/#website',
+          url: 'https://bbd.sh',
+          name: 'bbd.sh',
+          publisher: { '@id': 'https://bbd.sh/#org' },
+          inLanguage: 'en',
+        },
+      ],
+    })}></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-paper text-ink;
+    font-feature-settings: 'ss01', 'ss02', 'cv11', 'kern';
+  }
+  body {
+    @apply font-sans antialiased;
+  }
+  /* selection color */
+  ::selection {
+    @apply bg-electric text-ink;
+  }
+}
+
+@layer utilities {
+  /* terminal cursor blink */
+  .cursor-blink::after {
+    content: '▋';
+    @apply text-electric ml-1;
+    animation: blink 1.1s steps(2) infinite;
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+
+  /* ASCII frame */
+  .ascii-frame {
+    @apply font-mono text-xs text-muted whitespace-pre leading-tight;
+  }
+
+  /* shell prompt */
+  .prompt::before {
+    content: '$ ';
+    @apply text-electric;
+  }
+
+  /* "build log" meta */
+  .build-meta {
+    @apply font-mono text-xs uppercase tracking-widest text-muted;
+  }
+}
