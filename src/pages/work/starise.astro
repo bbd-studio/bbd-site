@@ -1,0 +1,107 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+
+<Base
+  title="Starise · case study — bbd.sh studio"
+  description="How bbd.sh studio designed, built, and launched Starise — a Transsion-backed VC fund investing in AI, clean energy, and fintech founders across Africa, Asia, and Latin America. Built on Vite + React, SEO from day one, deployed to client infrastructure."
+>
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <div class="font-mono text-xs uppercase tracking-widest text-muted mb-6">
+      ## work / starise
+    </div>
+
+    <h1 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
+      Starise — Transsion-backed VC for emerging markets
+    </h1>
+
+    <p class="font-mono text-sm text-muted mb-8">
+      Project type: brand site + SEO foundation · Status: live at <a href="https://www.starise.io" target="_blank" class="text-electric hover:underline">www.starise.io</a>
+    </p>
+
+    <p class="text-lg text-ink/75 leading-relaxed italic border-l-4 border-electric pl-4 mb-12">
+      "Starise is the launchpad to tomorrow's markets. We back visionary
+      founders building AI, clean energy, and fintech companies across
+      Africa, Asia, and Latin America. Backed by Transsion."
+      <span class="block text-sm not-italic text-muted mt-2">— Starise homepage tagline</span>
+    </p>
+
+    <div class="prose prose-lg max-w-none text-ink/85 leading-relaxed space-y-6">
+      <h2>About Starise</h2>
+      <p>
+        Starise is a venture capital fund focused on early-stage companies in
+        <strong>artificial intelligence</strong>, <strong>clean energy</strong>,
+        and <strong>fintech</strong>. The fund deploys capital across emerging
+        markets — primarily Africa, South and Southeast Asia, and Latin America —
+        regions where the next wave of growth meets significant unmet needs.
+      </p>
+      <p>
+        Starise is backed by <strong>Transsion Holdings</strong>, the global
+        mobile and IoT operator behind the Tecno, Itel, and Infinix brands —
+        Transsion's devices ship to over 100 million users annually,
+        predominantly across the same growth markets Starise invests in.
+      </p>
+
+      <h2>What we built</h2>
+      <p>
+        bbd.sh studio worked with the Starise team on the public-facing brand
+        site at <a href="https://www.starise.io" target="_blank" class="text-electric hover:underline">starise.io</a>.
+        The brief was simple: a landing presence that earns the brand's place
+        in serious VC conversations, with technical foundations that age well.
+      </p>
+
+      <h3>Scope</h3>
+      <ul>
+        <li>Brand site architecture and information design</li>
+        <li>Vite + React frontend, deployed as a static asset bundle</li>
+        <li>Full SEO foundation: meta tags, OG / Twitter cards, JSON-LD schema (Organization, WebSite), canonical declarations, robots.txt, sitemap.xml</li>
+        <li>Google Search Console verification + Bing Webmaster import</li>
+        <li>IndexNow integration to surface new pages to Bing and Yandex within minutes of publish</li>
+        <li>Client-deployed infrastructure (the team manages their own nginx / hosting)</li>
+      </ul>
+
+      <h3>Constraints we worked under</h3>
+      <ul>
+        <li><strong>Brand collision</strong>: "Starise" overlaps with several pre-existing entities — a Japanese tower / studio company, a Vocaloid song, a few minor commercial vendors. Search-engine entity disambiguation is a long game; we set the on-site fundamentals correctly so authority can compound over time.</li>
+        <li><strong>Stealth-friendly initial launch</strong>: Starise's portfolio and team details are still being announced publicly, so the homepage stays high-level by design.</li>
+        <li><strong>Client infrastructure</strong>: the client runs their own deploy pipeline — we shipped a clean dist bundle and a one-line deploy script.</li>
+      </ul>
+
+      <h2>Technology</h2>
+      <p>
+        Vite + React for the frontend (no framework lock-in beyond standard
+        tooling). All SEO signals baked into the static HTML at build time —
+        no JavaScript dependency for indexability. Hosted on the client's
+        nginx + standard Linux stack.
+      </p>
+
+      <h2>What's next</h2>
+      <p>
+        The site is live and indexed. Near-term roadmap items include:
+      </p>
+      <ul>
+        <li>Pre-rendered route content for /career and /news (so they're indexed independently from the homepage)</li>
+        <li>Editorial cadence for /news — investment announcements, thesis posts, portfolio company features</li>
+        <li>Off-site entity work — Crunchbase, LinkedIn, and partner network pages — so search engines confidently associate <strong>Starise</strong> with <strong>Transsion</strong> and the fund's actual scope</li>
+      </ul>
+
+      <h2>Why this matters</h2>
+      <p>
+        For a fund whose portfolio companies will themselves need to be found
+        by founders, journalists, and LPs — Starise's own discoverability
+        sets the tone. Getting the SEO foundation right at launch is cheaper
+        than rebuilding it after the fund has visibility but no authority.
+      </p>
+
+      <p>
+        Visit Starise: <a href="https://www.starise.io" target="_blank" class="text-electric hover:underline font-bold">www.starise.io</a>
+      </p>
+    </div>
+
+    <hr class="my-16 border-ink/10" />
+
+    <a href="/work" class="inline-block font-mono text-sm text-ink hover:text-electric">
+      ← all work
+    </a>
+  </article>
+</Base>
