@@ -9,6 +9,8 @@ interface Props {
   ogImage?: string;
   noindex?: boolean;
   canonical?: string;
+  theme?: 'default' | 'vision';
+  chrome?: boolean;
 }
 
 const {
@@ -17,6 +19,8 @@ const {
   ogImage = '/og.png',
   noindex = false,
   canonical,
+  theme = 'default',
+  chrome = true,
 } = Astro.props;
 
 const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
@@ -94,11 +98,11 @@ const ogImageURL = new URL(ogImage, Astro.site).toString();
       ],
     })}></script>
   </head>
-  <body class="min-h-screen flex flex-col">
-    <Header />
+  <body class={`min-h-screen flex flex-col ${theme === 'vision' ? 'theme-vision' : ''}`}>
+    {chrome && <Header theme={theme} />}
     <main class="flex-1">
       <slot />
     </main>
-    <Footer />
+    {chrome && <Footer theme={theme} />}
   </body>
 </html>

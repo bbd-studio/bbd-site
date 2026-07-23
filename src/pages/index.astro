@@ -1,343 +1,163 @@
 ---
 import Base from '../layouts/Base.astro';
-
-const labProjects = [
-  {
-    name: 'Starise',
-    status: 'in-progress',
-    statusColor: 'electric',
-    description:
-      'Starise is the launchpad to tomorrow’s markets. We back visionary founders building AI, clean energy, and fintech companies across Africa, Asia, and Latin America. Backed by Transsion.',
-    url: 'https://www.starise.io',
-  },
-  {
-    name: '[more projects]',
-    status: 'exploring',
-    statusColor: 'muted',
-    description: 'New directions in conversation with founders.',
-    url: null,
-  },
-];
 ---
 
 <Base
-  title="bbd.sh — We build software with founders"
-  description="A small studio that builds and ships digital products with founders, operators, and investors. We help validate the business, then ship it. Engagement is open — project fee, revenue share, equity, or hybrid."
+  theme="vision"
+  chrome={false}
+  title="bbd.sh — Build · Bootstrap · Deliver"
+  description="A small builder studio working alongside founders, operators, and investors to validate ideas and ship digital products."
 >
-  {/* ════════════════ HERO ════════════════ */}
-  <section class="border-b border-ink/10">
-    <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
-      <p class="font-mono text-sm text-muted mb-6">
-        <span class="text-electric">$</span> ./bbd.sh --about
-      </p>
-      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-4">
-        Build · Bootstrap · Deliver
-      </p>
+  <div id="vision-root" class="relative bg-[#050505]">
+    <canvas
+      id="vision-canvas"
+      class="fixed inset-0 z-0 h-full w-full"
+      aria-hidden="true"
+    ></canvas>
 
-      <h1 class="font-display text-5xl md:text-7xl font-bold leading-[1.05] tracking-tight mb-8">
-        We build software<br />
-        <span class="italic text-ember">with founders</span>,<br />
-        not <span class="text-electric">for them</span><span class="cursor-blink"></span>
-      </h1>
+    <div class="cinema-vignette pointer-events-none fixed inset-0 z-[5]" aria-hidden="true"></div>
+    <div class="cinema-grain pointer-events-none fixed inset-0 z-[6]" aria-hidden="true"></div>
 
-      <p class="text-lg md:text-xl text-ink/75 max-w-2xl leading-relaxed mb-10">
-        A small studio. We work with founders, operators, and VCs to validate the model and ship the product.<br />
-        Engagement is open — project fee, revenue share, equity, or hybrid. What matters is the work ships.
-      </p>
-
-      <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+    <header class="fixed inset-x-0 top-0 z-20 flex items-center justify-between px-6 py-5 sm:px-10">
+      <a href="/" class="cinema-serif text-sm tracking-[0.35em] text-white/70 hover:text-white transition-colors">
+        bbd<span class="text-white/40">.sh</span>
+      </a>
+      <nav class="flex items-center gap-5 sm:gap-8">
+        <span class="hidden sm:inline text-[10px] uppercase tracking-[0.5em] text-white/40">
+          Build · Bootstrap · Deliver
+        </span>
         <a
           href="/contact"
-          class="px-6 py-3 bg-ink text-paper hover:bg-electric hover:text-ink transition-colors rounded font-mono text-sm font-bold"
+          class="text-[9px] uppercase tracking-[0.35em] text-white/55 hover:text-white transition-colors"
         >
-          tell us your idea →
+          Contact ↗
         </a>
-        <a
-          href="/lab"
-          class="px-6 py-3 border border-ink/20 hover:border-electric hover:text-electric transition-colors rounded font-mono text-sm"
-        >
-          see what we're building ↓
-        </a>
-      </div>
+      </nav>
+    </header>
 
-      <div class="mt-16 pt-8 border-t border-ink/10 grid grid-cols-3 gap-6 max-w-2xl font-mono text-sm">
-        <div>
-          <p class="text-3xl font-bold text-ink">∞</p>
-          <p class="text-xs text-muted mt-1">any digital product</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold text-ink">⚡</p>
-          <p class="text-xs text-muted mt-1">modern AI tooling, used as leverage</p>
-        </div>
-        <div>
-          <p class="text-3xl font-bold text-electric">+1</p>
-          <p class="text-xs text-muted mt-1">we build alongside you</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  {/* ════════════════ MANIFESTO ════════════════ */}
-  <section class="border-b border-ink/10">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-2">
-        ## manifesto.md
-      </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-12 max-w-4xl">
-        We <span class="italic text-electric">ship</span> the product.
-        We're <span class="italic text-electric">flexible</span> on the deal.
-        Founders, operators, and VCs all welcome.
-      </h2>
-
-      <div class="grid md:grid-cols-3 gap-8 font-mono text-sm">
-        <div class="border border-ink/10 p-6 bg-graphite text-paper">
-          <p class="text-electric mb-3">// flexible terms</p>
-          <p class="text-paper/80 leading-relaxed">
-            Project fee, revenue share,<br />
-            equity, or hybrid.<br />
-            Pick what fits the situation.
+    <main class="relative z-10">
+      <section class="relative flex h-screen min-h-[38rem] flex-col items-center justify-center">
+        <div data-fade class="flex flex-col items-center text-center">
+          <p class="mb-8 text-[10px] uppercase tracking-[0.6em] text-white/45">
+            A small builder studio
+          </p>
+          <h1 class="cinema-serif cinema-hero-title select-none">bbd</h1>
+          <p class="cinema-serif mt-10 px-6 text-xl italic tracking-[0.06em] text-white/85 sm:mt-12 sm:text-2xl">
+            We build software with founders.
+          </p>
+          <p class="mt-5 text-[9px] uppercase tracking-[0.46em] text-white/40 sm:text-[10px] sm:tracking-[0.5em]">
+            Build · Bootstrap · Deliver
           </p>
         </div>
-        <div class="border border-ink/10 p-6 bg-graphite text-paper">
-          <p class="text-electric mb-3">// ship over decks</p>
-          <p class="text-paper/80 leading-relaxed">
-            We don't ship 50-page plans.<br />
-            We ship code, designs, and pages<br />
-            that take payments — from day one.
+
+        <div class="absolute bottom-10 flex flex-col items-center gap-3">
+          <span class="text-[9px] uppercase tracking-[0.5em] text-white/35">scroll</span>
+          <span class="cinema-scroll-line"></span>
+        </div>
+      </section>
+
+      <section class="flex h-screen min-h-[38rem] items-center justify-center">
+        <div data-fade class="flex flex-col items-center text-center">
+          <p class="mb-6 text-[10px] tracking-[0.6em] text-white/40">01 / 03</p>
+          <h2 class="cinema-serif cinema-act-title italic">Build</h2>
+          <p class="mt-3 text-[10px] uppercase tracking-[0.55em] text-white/50">
+            make it tangible
+          </p>
+          <p class="cinema-serif mt-10 max-w-xl px-6 text-lg leading-relaxed text-white/80 sm:text-xl">
+            Turn the idea into something people
+            <br class="hidden sm:block" />
+            can see, use, and believe in.
           </p>
         </div>
-        <div class="border border-ink/10 p-6 bg-graphite text-paper">
-          <p class="text-electric mb-3">// partner over vendor</p>
-          <p class="text-paper/80 leading-relaxed">
-            We don't bill by the hour.<br />
-            We're your build partner —<br />
-            you decide, we execute.
+      </section>
+
+      <section class="flex h-screen min-h-[38rem] items-center justify-center">
+        <div data-fade class="flex flex-col items-center text-center">
+          <p class="mb-6 text-[10px] tracking-[0.6em] text-white/40">02 / 03</p>
+          <h2 class="cinema-serif cinema-act-title italic">Bootstrap</h2>
+          <p class="mt-3 text-[10px] uppercase tracking-[0.55em] text-white/50">
+            find the signal
+          </p>
+          <p class="cinema-serif mt-10 max-w-xl px-6 text-lg leading-relaxed text-white/80 sm:text-xl">
+            Start small enough to learn,
+            <br class="hidden sm:block" />
+            then follow what proves itself.
           </p>
         </div>
-      </div>
+      </section>
 
-      <p class="font-display text-3xl md:text-4xl mt-16 max-w-3xl leading-tight">
-        We're a <span class="bg-electric text-ink px-2 italic">Builder Studio</span> —
-        <br class="hidden md:block" />
-        you bring the insight, we bring the code, design, and growth.
-      </p>
-    </div>
-  </section>
+      <section class="flex h-screen min-h-[38rem] items-center justify-center">
+        <div data-fade class="flex flex-col items-center text-center">
+          <p class="mb-6 text-[10px] tracking-[0.6em] text-white/40">03 / 03</p>
+          <h2 class="cinema-serif cinema-act-title italic">Deliver</h2>
+          <p class="mt-3 text-[10px] uppercase tracking-[0.55em] text-white/50">
+            put it in the world
+          </p>
+          <p class="cinema-serif mt-10 max-w-xl px-6 text-lg leading-relaxed text-white/80 sm:text-xl">
+            Ship the real product —
+            <br class="hidden sm:block" />
+            not another promise of one.
+          </p>
+        </div>
+      </section>
 
-  {/* ════════════════ HOW WE WORK ════════════════ */}
-  <section class="border-b border-ink/10 bg-ink text-paper">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <p class="font-mono text-xs uppercase tracking-widest text-electric mb-2">
-        ## workflow.sh
-      </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-12">
-        From a coffee to live<br />
-        <span class="text-electric">how we work with you</span>
-      </h2>
-
-      <ol class="space-y-12">
-        <li class="grid md:grid-cols-[120px_1fr] gap-6">
-          <div class="font-mono text-sm">
-            <p class="text-electric font-bold">step 01</p>
+      <section class="flex h-screen min-h-[38rem] items-center justify-center">
+        <div data-fade class="flex flex-col items-center text-center">
+          <p class="cinema-serif px-6 text-2xl italic leading-relaxed tracking-[0.04em] text-white/90 sm:text-3xl">
+            From the first useful signal,
+            <br />
+            to a product in the world.
+          </p>
+          <div class="mt-14 h-px w-16 bg-white/25"></div>
+          <a
+            href="/contact"
+            class="mt-10 border border-white/20 rounded-full px-7 py-3 text-[10px] uppercase tracking-[0.42em] text-white/65 hover:bg-white hover:text-black transition-colors"
+          >
+            Start a project
+          </a>
+          <div class="mt-10 flex items-center gap-6 text-[9px] uppercase tracking-[0.36em] text-white/35">
+            <a href="/work" class="hover:text-white transition-colors">Work</a>
+            <a href="/lab" class="hover:text-white transition-colors">Lab</a>
+            <a href="/about" class="hover:text-white transition-colors">About</a>
           </div>
-          <div>
-            <h3 class="font-display text-2xl font-bold mb-2">Coffee → Sketch</h3>
-            <p class="text-paper/75 leading-relaxed max-w-2xl">
-              One conversation to align. We hand back a build sketch —
-              product shape, stack, key milestones, path to first revenue.
-            </p>
-          </div>
-        </li>
-        <li class="grid md:grid-cols-[120px_1fr] gap-6">
-          <div class="font-mono text-sm">
-            <p class="text-electric font-bold">step 02</p>
-          </div>
-          <div>
-            <h3 class="font-display text-2xl font-bold mb-2">Probe</h3>
-            <p class="text-paper/75 leading-relaxed max-w-2xl">
-              We test the smallest signal first — a landing + waitlist,
-              a working LLM demo, a recordable prototype.
-              The point: <strong class="text-electric">a real signal before either side commits real time</strong>.
-            </p>
-          </div>
-        </li>
-        <li class="grid md:grid-cols-[120px_1fr] gap-6">
-          <div class="font-mono text-sm">
-            <p class="text-electric font-bold">step 03</p>
-          </div>
-          <div>
-            <h3 class="font-display text-2xl font-bold mb-2">Build &amp; Ship</h3>
-            <p class="text-paper/75 leading-relaxed max-w-2xl">
-              A version that actually runs. Frontend, backend, payments, AI integration,
-              brand, copy, and SEO basics — bundled.
-              Modern tooling lets us compress the build cycle without cutting quality.
-            </p>
-          </div>
-        </li>
-        <li class="grid md:grid-cols-[120px_1fr] gap-6">
-          <div class="font-mono text-sm">
-            <p class="text-electric font-bold">step 04</p>
-            <p class="text-paper/60 text-xs mt-1">your call</p>
-          </div>
-          <div>
-            <h3 class="font-display text-2xl font-bold mb-2">Hand-off or Hold</h3>
-            <p class="text-paper/75 leading-relaxed max-w-2xl">
-              Once it's live you can take over, hire your own team,
-              or keep us on for growth. Entirely your call.
-            </p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+          <p class="cinema-serif mt-8 text-sm tracking-[0.35em] text-white/60">bbd.sh</p>
+        </div>
+      </section>
+    </main>
+  </div>
 
-  {/* ════════════════ AI ADVANTAGE ════════════════ */}
-  <section class="border-b border-ink/10">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-2">
-        ## why_ai.md
-      </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-6 max-w-4xl">
-        We're not "an AI company."<br />
-        We're builders who use <span class="text-ember">AI as leverage</span>.
-      </h2>
-      <p class="text-lg text-ink/70 max-w-3xl leading-relaxed mb-12">
-        Claude / GPT / Cursor / v0 / LangGraph / MCP —
-        these tools let a small team take on work that used to need a whole engineering org.
-      </p>
+  <script>
+    import { mountVisionCanvas } from '../scripts/vision-canvas';
 
-      <div class="grid md:grid-cols-2 gap-x-12 gap-y-6 font-mono text-sm">
-        {[
-          ['Frontend', 'v0 · Cursor · Claude · React/Vue/Svelte · Tailwind'],
-          ['Backend', 'GPT-5 + Claude · FastAPI / Hono / Bun · PostgreSQL'],
-          ['AI / Agent', 'OpenAI · Anthropic · DeepSeek · LangGraph · MCP'],
-          ['Design', 'Figma + AI · Midjourney · in-house brand kit'],
-          ['Deploy', 'Cloudflare · Vercel · Fly.io · Edge-first'],
-          ['Growth', 'Plausible · PostHog · AEO/GEO monitoring'],
-        ].map(([category, tools]) => (
-          <div class="border-l-2 border-ink/10 pl-4">
-            <p class="text-electric mb-1">{category}</p>
-            <p class="text-ink/70">{tools}</p>
-          </div>
-        ))}
-      </div>
+    const root = document.querySelector<HTMLElement>('#vision-root');
+    const canvas = document.querySelector<HTMLCanvasElement>('#vision-canvas');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const cleanups: Array<() => void> = [];
 
-      <p class="mt-12 font-display text-2xl italic max-w-3xl text-ink/80">
-        "AI doesn't do the work for us — it lets a small team take on big projects."
-      </p>
-    </div>
-  </section>
+    if (canvas) cleanups.push(mountVisionCanvas(canvas));
 
-  {/* ════════════════ CURRENTLY IN LAB ════════════════ */}
-  <section class="border-b border-ink/10 bg-paper">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-2">
-        ## ./lab/
-      </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Currently in Lab
-      </h2>
-      <p class="text-ink/60 mb-12 font-mono text-sm">
-        what we're building right now · unfiltered
-      </p>
+    if (root && !reduceMotion) {
+      const blocks = Array.from(root.querySelectorAll<HTMLElement>('[data-fade]'));
+      let frame = 0;
+      const update = () => {
+        const viewportHeight = window.innerHeight;
+        const midpoint = viewportHeight / 2;
+        for (const element of blocks) {
+          const rect = element.getBoundingClientRect();
+          const center = rect.top + rect.height / 2;
+          const distance = Math.abs(center - midpoint);
+          const opacity = Math.max(0, 1 - distance / (viewportHeight * 0.42));
+          element.style.opacity = opacity.toFixed(3);
+          element.style.transform = `translateY(${((center - midpoint) * -0.05).toFixed(1)}px)`;
+        }
+        frame = requestAnimationFrame(update);
+      };
+      update();
+      cleanups.push(() => cancelAnimationFrame(frame));
+    }
 
-      <div class="space-y-3 font-mono text-sm">
-        {labProjects.map((project) => (
-          <div class="border border-ink/10 p-5 hover:border-ink/30 transition-colors group">
-            <div class="flex items-start justify-between gap-4 mb-2">
-              <div class="flex items-center gap-3">
-                <span class={`inline-block w-2 h-2 rounded-full ${
-                  project.statusColor === 'electric' ? 'bg-electric animate-pulse' :
-                  project.statusColor === 'ember' ? 'bg-ember' : 'bg-muted'
-                }`}></span>
-                <span class="font-bold text-ink text-base">{project.name}</span>
-                <span class={`text-xs uppercase tracking-wider ${
-                  project.statusColor === 'electric' ? 'text-electric' :
-                  project.statusColor === 'ember' ? 'text-ember' : 'text-muted'
-                }`}>
-                  {project.status}
-                </span>
-              </div>
-            </div>
-            <p class="text-ink/70 ml-5">{project.description}</p>
-            {project.url && (
-              <a href={project.url} target="_blank" class="inline-block mt-2 ml-5 text-electric text-xs hover:underline">
-                Visit {project.name} → {project.url} ↗
-              </a>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div class="mt-8 pt-6 border-t border-ink/10 font-mono text-xs text-muted">
-        <p>※ We're picky about fit. Reach out if your idea matches:</p>
-        <ul class="mt-3 space-y-1 list-none">
-          <li><span class="text-electric">[ ]</span> you'll be hands-on (not handing it off)</li>
-          <li><span class="text-electric">[ ]</span> you can name the customer and the pain</li>
-          <li><span class="text-electric">[ ]</span> the project stays inside legal lines</li>
-        </ul>
-        <a href="/contact" class="inline-block mt-6 text-ink hover:text-electric font-bold">
-          → send us your idea
-        </a>
-      </div>
-    </div>
-  </section>
-
-  {/* ════════════════ NOTEBOOK PREVIEW ════════════════ */}
-  <section class="border-b border-ink/10">
-    <div class="max-w-6xl mx-auto px-6 py-20">
-      <p class="font-mono text-xs uppercase tracking-widest text-muted mb-2">
-        ## notebook/
-      </p>
-      <h2 class="font-display text-4xl md:text-5xl font-bold leading-tight mb-4">
-        Build Log
-      </h2>
-      <p class="text-ink/60 mb-12 max-w-2xl">
-        We document every project as it happens — not marketing copy, just commit history.
-      </p>
-
-      <div class="space-y-8">
-        <article class="grid md:grid-cols-[150px_1fr] gap-6 group cursor-pointer">
-          <div class="build-meta">
-            <span class="text-electric">day 0</span>
-          </div>
-          <div>
-            <h3 class="font-display text-2xl font-bold mb-2 group-hover:text-electric transition-colors">
-              <a href="/notebook/day-zero">Day 0: starting a public build log</a>
-            </h3>
-            <p class="text-ink/70 leading-relaxed">
-              We're publishing the entire process of doing SEO and brand from zero —
-              real numbers, real progress, real reviews.
-            </p>
-          </div>
-        </article>
-      </div>
-
-      <a href="/notebook" class="inline-block mt-12 font-mono text-sm text-ink hover:text-electric">
-        all entries →
-      </a>
-    </div>
-  </section>
-
-  {/* ════════════════ FINAL CTA ════════════════ */}
-  <section class="bg-ink text-paper">
-    <div class="max-w-6xl mx-auto px-6 py-32 text-center">
-      <p class="font-mono text-xs uppercase tracking-widest text-electric mb-6">
-        # ready_to_ship
-      </p>
-      <h2 class="font-display text-4xl md:text-6xl font-bold leading-tight mb-8">
-        Idea you've been sitting on?<br />
-        <span class="italic text-electric">This time, ship it.</span>
-      </h2>
-      <a
-        href="/contact"
-        class="inline-block px-8 py-4 bg-electric text-ink hover:bg-paper transition-colors rounded font-mono text-base font-bold"
-      >
-        $ ./let-us-talk →
-      </a>
-      <p class="mt-6 font-mono text-xs text-paper/50">
-        hello@bbd.sh
-      </p>
-    </div>
-  </section>
+    window.addEventListener('pagehide', () => {
+      for (const cleanup of cleanups) cleanup();
+    }, { once: true });
+  </script>
 </Base>
